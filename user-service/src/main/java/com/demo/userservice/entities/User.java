@@ -1,9 +1,20 @@
-package com.demo.dbservice.dbservice.model;
+package com.demo.userservice.entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "USER")
 public class User {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(name = "USER_ID")
     private String userid;
+    @Column(name = "FIRST_NAME")
     private String firstName;
+    @Column(name = "LAST_NAME")
     private String lastName;
 
     public long getId() {
