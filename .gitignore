@@ -1,8 +1,8 @@
 *.zip
-dbservice/target
-dbservice/mvnw
-dbservice/mvnw.cmd
-dbservice/.mvn/
+order-service/target
+order-service/mvnw
+order-service/mvnw.cmd
+order-service/.mvn/
 eureka-server/target
 eureka-server/.mvn/
 eureka-server/mvnw
