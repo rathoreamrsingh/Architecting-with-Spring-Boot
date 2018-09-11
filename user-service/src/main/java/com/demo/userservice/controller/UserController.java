@@ -1,6 +1,7 @@
 package com.demo.userservice.controller;
 
 import com.demo.userservice.model.User;
+import com.demo.userservice.model.UserWithOrder;
 import com.demo.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +33,13 @@ public class UserController {
     public User getUserByUserName(@PathVariable(value = "username") String username) {
         User result;
         result = userService.getUserByUsername(username);
+        return result;
+    }
+
+    @GetMapping("/getUserWithOrders/{username}")
+    public UserWithOrder getUserWithOrders(@PathVariable(value = "username") String username) {
+        UserWithOrder result;
+        result = userService.getUserWithUser(username);
         return result;
     }
 }

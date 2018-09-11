@@ -2,6 +2,7 @@ package com.demo.userservice.service;
 
 
 import com.demo.userservice.model.User;
+import com.demo.userservice.model.UserWithOrder;
 
 import java.util.List;
 
@@ -12,4 +13,6 @@ public interface UserService {
     User getUserByUsername(String userId);
 
     User addUser(User user);
+
+    UserWithOrder getUserWithUser(String username);
 }
