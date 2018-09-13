@@ -1,8 +1,9 @@
 package com.demo.orderservice.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Order {
+public class Order implements Serializable {
     private long orderId;
     private String orderDetail;
     private String quantity;

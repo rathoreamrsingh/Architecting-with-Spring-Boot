@@ -8,7 +8,7 @@ public class Order {
     private String quantity;
     private String quantityUnit;
     private String userId;
-    private Date orderDate;
+    private String orderDate;
 
     public long getOrderId() {
         return orderId;
@@ -50,11 +50,11 @@ public class Order {
         this.userId = userId;
     }
 
-    public Date getOrderDate() {
+    public String getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
 }
