@@ -11,3 +11,8 @@ user-service/target
 user-service/mvnw
 user-service/mvnw.cmd
 user-service/.mvn/
+
+gateway-service/target
+gateway-service/mvnw
+gateway-service/mvnw.cmd
+gateway-service/.mvn/
