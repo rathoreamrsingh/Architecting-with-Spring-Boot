@@ -1,6 +1,7 @@
 package com.demo.userservice.service;
 
 
+import com.demo.userservice.model.LoginDetail;
 import com.demo.userservice.model.User;
 import com.demo.userservice.model.UserWithOrder;
 
@@ -15,4 +16,6 @@ public interface UserService {
     User addUser(User user);
 
     UserWithOrder getUserWithUser(String username);
+
+    Boolean login(LoginDetail loginDetail);
 }

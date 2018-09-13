@@ -1,6 +1,7 @@
 package com.demo.userservice.service.impl;
 
 
+import com.demo.userservice.model.LoginDetail;
 import com.demo.userservice.model.Order;
 import com.demo.userservice.model.User;
 import com.demo.userservice.model.UserWithOrder;
@@ -96,6 +97,16 @@ public class UserServiceImpl implements UserService {
             pe.printStackTrace();
         }
         result.setOrders(listOfOrders);
+        return result;
+    }
+
+    @Override
+    public Boolean login(LoginDetail loginDetail) {
+        Boolean result = false;
+        com.demo.userservice.entities.User u = userRepository.findByUseridAndPassword(loginDetail.getUsername(), loginDetail.getPassword());
+        if(u != null) {
+            result = true;
+        }
         return result;
     }
 }
