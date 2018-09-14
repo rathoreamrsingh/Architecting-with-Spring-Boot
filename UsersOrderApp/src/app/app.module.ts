@@ -12,7 +12,7 @@ import { FormsModule } from '../../node_modules/@angular/forms';
 import { HttpRequestService } from './shared/services/http-request.service';
 import { Http, HttpModule } from '../../node_modules/@angular/http';
 import { AddorderComponent } from './user/addorder/addorder.component';
-
+import {FlexLayoutModule} from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +28,7 @@ import { AddorderComponent } from './user/addorder/addorder.component';
     AppRoutingModule,
     FormsModule,
     HttpModule,
+    FlexLayoutModule
   ],
   providers: [HttpRequestService],
   bootstrap: [AppComponent]

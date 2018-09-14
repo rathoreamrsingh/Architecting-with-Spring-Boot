@@ -3,3 +3,32 @@
        Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
   }
+
+  mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}
+
+mat-sidenav{
+    width:450px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover,
+a:active {
+    color: lightgray;
+}
+
+.navigation-items{
+    list-style: none;
+    padding: 0;
+    margin :0;
+}
+
+.nav-caption{
+    display: inline-flex;
+    padding-left: 6px;
+}

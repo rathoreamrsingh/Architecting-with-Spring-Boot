@@ -1,4 +1,4 @@
-<mat-card class="example-card">
+<!-- <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>Place Order</mat-card-title>
@@ -32,4 +32,31 @@
     </section>
   </mat-card-content>
 
-</mat-card>
+</mat-card> -->
+
+<section >
+  <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmitOrder(f)">
+    <mat-form-field hintLabel="Name of the product">
+      <input type="text" matInput placeholder="Your Order Details" ngModel name="orderdetail" required
+      #pwInput="ngModel">
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input type="text" matInput placeholder="Please provide quantity" ngModel name="quantity"  required>
+      <mat-error>Email is invalid</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field hintLabel="Unit of the product">
+      <input type="text" matInput placeholder="Your product unit Details" ngModel name="unit" required
+      #pwInput="ngModel">
+    </mat-form-field>
+    <!-- <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field> -->
+    <!-- <mat-checkbox ngModel name="agree" required> Terms & Condition</mat-checkbox> -->
+    <button type="submit" color="primary" mat-raised-button [disabled]="f.invalid">Add Order</button>
+  </form>
+</section>

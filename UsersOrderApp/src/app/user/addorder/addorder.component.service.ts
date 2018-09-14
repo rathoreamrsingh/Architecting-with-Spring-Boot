@@ -7,15 +7,16 @@ import { HttpRequestService } from '../../shared/services/http-request.service';
 export class AddOrderService {
     constructor(private _httpService: HttpRequestService, private _router: Router) { }
 
-    public addAnOrder(user,successcallback) {
+    public addAnOrder(order, successcallback) {
         let responseObject: any;
         const payload = {
-            orderDate: '2018-09-14T16:39:44.722Z',
-            orderDetail: 'string',
-            quantity: 'string',
-            quantityUnit: 'string',
-            userId: 'amarsingh'
-          };
+
+            orderDate: new Date(),
+            orderDetail: order.orderDetail,
+            quantity: order.quantity,
+            quantityUnit: order.quantityUnit,
+            userId: order.userId
+        };
         this._httpService.postRequest(Config.getEnvironmentVariable('saveorder'), payload)
             .subscribe(
                 (data) => {
