@@ -9,22 +9,27 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './user/home/home.component';
 import { FormsModule } from '../../node_modules/@angular/forms';
+import { HttpRequestService } from './shared/services/http-request.service';
+import { Http, HttpModule } from '../../node_modules/@angular/http';
+import { AddorderComponent } from './user/addorder/addorder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AddorderComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [HttpRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,35 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Place Order</mat-card-title>
+    <mat-card-subtitle>Please place an order</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <section>
+      <form #f="ngForm" (ngSubmit)="onSubmitOrder(f)">
+        <div>
+
+          <mat-form-field>
+            <input type="text" matInput placeholder="Your Order Detail" ngModel name="orderDetail" required>
+            <mat-error>Order detail is invalid</mat-error>
+          </mat-form-field>
+        </div>
+        
+          <div>
+            <mat-form-field>
+              <input type="number" matInput placeholder="quantity" ngModel name="quantity" required>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <input type="text" matInput placeholder="Unit" ngModel name="unit" required>
+              <mat-error>Unit is invalid</mat-error>
+            </mat-form-field>
+          </div>
+
+          <button type="submit" color="primary" mat-raised-button [disabled]="f.invalid">Submit</button>
+      </form>
+    </section>
+  </mat-card-content>
+
+</mat-card>
