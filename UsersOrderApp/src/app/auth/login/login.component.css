@@ -1,0 +1,10 @@
+.example-card {
+    max-width: 400px;
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
+  }
+  
+  .example-header-image {
+    background-image: url('/assets/login.jpg');
+    background-size: cover;
+  }

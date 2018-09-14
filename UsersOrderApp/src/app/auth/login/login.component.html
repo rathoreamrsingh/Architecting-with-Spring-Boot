@@ -1,0 +1,42 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-subtitle>Please provide login details</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <section >
+      <form  #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div>
+
+          <mat-form-field>
+            <input type="email" matInput placeholder="Your Email" ngModel name="email" email required>
+            <mat-error>Email is invalid</mat-error>
+          </mat-form-field>
+        </div>
+    <div>
+
+      <mat-form-field hintLabel="Should be 6 Characters long">
+        <input type="password" matInput placeholder="Your Password" ngModel name="password" required
+        #pwInput="ngModel"    >
+        <!-- <mat-hint align="end">{{ pwInput.value?.length}} /6</mat-hint> -->
+      </mat-form-field>
+    </div>
+    <div>
+
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div>
+
+      <mat-checkbox ngModel name="agree" required> Terms & Condition</mat-checkbox>
+    </div>
+        <button type="submit" color="primary" mat-raised-button [disabled]="f.invalid">Submit</button>
+      </form>
+    </section>
+  </mat-card-content>
+ 
+</mat-card>
