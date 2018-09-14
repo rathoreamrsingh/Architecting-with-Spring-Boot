@@ -16,4 +16,10 @@ gateway-service/target
 gateway-service/mvnw
 gateway-service/mvnw.cmd
 gateway-service/.mvn/
+
 UsersOrderApp/node_modules
+
+config-server/target
+config-server/mvnw
+config-server/mvnw.cmd
+config-server/.mvn/
