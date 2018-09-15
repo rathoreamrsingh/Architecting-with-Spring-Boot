@@ -1,6 +1,6 @@
 import { NgModule } from '../../node_modules/@angular/core';
 import {MatSidenavModule, MatMenuModule, MatIconModule, MatButtonModule,
-     MatCardModule, MatDatepickerModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, MatListModule, MatTableModule} from '@angular/material';
+     MatCardModule, MatDatepickerModule, MatCheckboxModule, MatInputModule, MatNativeDateModule, MatListModule, MatTableModule, MatPaginator, MatPaginatorModule} from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -18,7 +18,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
         MatToolbarModule,
         MatIconModule,
         MatListModule,
-        MatTableModule
+        MatTableModule,
+        MatPaginatorModule
     ],
     exports: [
         MatMenuModule,
@@ -33,7 +34,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
         MatToolbarModule,
         MatIconModule,
         MatListModule,
-        MatTableModule
+        MatTableModule,
+        MatPaginatorModule
     ]
 })
 export class MaterialModule{}

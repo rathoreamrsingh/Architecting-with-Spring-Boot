@@ -8,15 +8,13 @@ export class LoginService {
 
     constructor(private _httpService: HttpRequestService, private _router: Router) { }
 
-    public getAllUsers(user,successcallback) {
+    public getAllUsers(user, successcallback) {
         let responseObject: any;
         const payload = {
             username: user.username,
             password: user.password
 
         };
-        // this._httpService.getRequest(Config.getEnvironmentVariable('finduser')+ userId, successcallback);
-        console.log(Config.getEnvironmentVariable('finduser'));
         this._httpService.postRequest(Config.getEnvironmentVariable('finduser'), payload)
             .subscribe(
                 (data) => {
@@ -30,7 +28,7 @@ export class LoginService {
             );
     }
 
-    public getUserByname(){
+    public getUserByname() {
 
     }
 

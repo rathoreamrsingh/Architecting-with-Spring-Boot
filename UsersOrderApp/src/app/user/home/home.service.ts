@@ -9,7 +9,6 @@ export class HomeService {
     constructor(private _httpService: HttpRequestService, private _router: Router) { }
 
     public getAllOrders(successcallback) {
-        console.log('getAllorders');
         let responseObject: any;
         this._httpService.getRequest(Config.getEnvironmentVariable('orderbyuser') + localStorage.getItem('loggedin'))
             .subscribe(
